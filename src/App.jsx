@@ -13,10 +13,6 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-  /*
-  Define state variables for 
-  contacts and appointments 
-  */
   const [contacts, setContacts] = useState([
     { name: 'John Doe', phone: '123-456-7890', email: 'john.doe@example.com' },
     {
@@ -40,10 +36,6 @@ function App() {
     },
   ]);
 
-  /*
-  Implement functions to add data to
-  contacts and appointments
-  */
   const addContact = (contact) => {
     setContacts([contact, ...contacts]);
   };
@@ -56,12 +48,7 @@ function App() {
         <Route index element={<Navigate to={ROUTES.CONTACTS} replace />} />
         <Route
           path={ROUTES.CONTACTS}
-          element={
-            <ContactsPage
-              addContact={addContact}
-              contacts={contacts}
-            /> /* Add props to ContactsPage */
-          }
+          element={<ContactsPage addContact={addContact} contacts={contacts} />}
         />
         <Route
           path={ROUTES.APPOINTMENTS}
@@ -70,7 +57,7 @@ function App() {
               addAppointment={addAppointment}
               appointments={appointments}
               contacts={contacts}
-            /> /* Add props to AppointmentsPage */
+            />
           }
         />
       </Route>

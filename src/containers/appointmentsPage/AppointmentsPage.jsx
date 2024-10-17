@@ -8,10 +8,6 @@ export const AppointmentsPage = ({
   appointments,
   addAppointment,
 }) => {
-  /*
-  Define state variables for 
-  appointment info
-  */
   const [title, setTitle] = useState('');
   const [contact, setContact] = useState('');
   const [date, setDate] = useState('');
@@ -19,9 +15,7 @@ export const AppointmentsPage = ({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    /*
-    Add contact info and clear data  
-    */
+
     addAppointment({ title, contact, date, time });
     setTitle('');
     setContact('');
