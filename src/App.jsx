@@ -15,11 +15,6 @@ import './App.css';
 function App() {
   const [contacts, setContacts] = useState([
     { name: 'John Doe', phone: '123-456-7890', email: 'john.doe@example.com' },
-    {
-      name: 'Jane Smith',
-      phone: '987-654-3210',
-      email: 'jane.smith@example.com',
-    },
   ]);
   const [appointments, setAppointments] = useState([
     {
@@ -27,12 +22,6 @@ function App() {
       contact: 'John Doe',
       date: '2023-10-01',
       time: '10:00',
-    },
-    {
-      title: 'Lunch with Jane',
-      contact: 'Jane Smith',
-      date: '2023-10-02',
-      time: '12:00',
     },
   ]);
 
